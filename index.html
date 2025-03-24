@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://myfonts.ru/myfonts?fonts=sf-ui-text" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="site-header">
+            <nav class="header__nav">
+                <div class="header__nav-title">
+                    <p class="nav-title">Поездки</p>
+                </div>
+                <div class="header__nav-account">
+                    <p class="nav-account">Заболоцкий К.О.</p>
+                    <svg class="logout-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 17L21 12L16 7" stroke="rgb(14, 115, 246)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 12H9" stroke="rgb(14, 115, 246)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 5H5V19H9" stroke="rgb(14, 115, 246)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </nav>
+        </header>
+        <section class="menu">
+            <div class="menu-header">
+                <p class="menu__title">Мои поездки</p>
+                <a href="#" class="menu__button"><span class="menu__button-plus">+</span><span class="menu__button-text">Оформить поездку</span></a>
+            </div>
+            <div class="menu__filters">
+                <form>
+                    <label class="date__from" for="date__from">Период с:</label>
+                    <input id="date__from" required="" type="text" class="form-control" placeholder="22.02.2024" onfocus="(this.type='date')"/>
+                        <svg class="clear-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 6L18 18" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                    <label class="date__till" for="date__till">по:</label>
+                    <input id="date__till" required="" type="text" class="form-control" placeholder="Выбрать..." onfocus="(this.type='date')"/>
+                </form>
+                <div id="search-form" >
+                    <input class="date__search" type="search" id="query" name="q" placeholder="Поиск...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <button class="button__reset">Сбросить всe</button>
+                <div class="trips__archive">
+                    <input class="trips__archive-input" type="checkbox" name="trips__archive" id="trips__archive">
+                    <label for="trips__archive">Показать архивные поездки</label>
+                </div>
+
+            </div>
+        </section>
+        <section class="trip__cards">
+            <ul class="trip__cards-list">
+                <li class="trip__cards-card">
+                    <div class="card__number"> 
+                        <p class="card__number-title">№ поездки</p>
+                        <p class="card__number-value">000115</p>
+                    </div>
+                    <div class="card__date">
+                        <p class="card__date-title">Дата поездки</p>
+                        <p class="card__date-value">22.02.2024-27.02.2024</p>
+                    </div>
+                    <div class="card__sum-plan">
+                        <p class="card__sum-title">Сумма, план</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__sum-fact">
+                        <p class="card__sum-title">Сумма, факт</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__city">
+                        <p class="card__city-title">Город</p>
+                        <p class="card__city-value">Москва, Ярославль, Ижевск, Владимир</p>
+                    </div>
+                    <div class="card__status">
+                        <p class="card__status-title">Статус</p>
+                        <p class="card__status-value">Документы</p>
+                    </div>
+                </li>
+                <li class="trip__cards-card">
+                    <div class="card__number"> 
+                        <p class="card__number-title">№ поездки</p>
+                        <p class="card__number-value">000117</p>
+                    </div>
+                    <div class="card__date">
+                        <p class="card__date-title">Дата поездки</p>
+                        <p class="card__date-value">22.02.2024-27.02.2024</p>
+                    </div>
+                    <div class="card__sum-plan">
+                        <p class="card__sum-title">Сумма, план</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__sum-fact">
+                        <p class="card__sum-title">Сумма, факт</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__city">
+                        <p class="card__city-title">Город</p>
+                        <p class="card__city-value">Москва</p>
+                    </div>
+                    <div class="card__status">
+                        <p class="card__status-title">Статус</p>
+                        <p class="card__status-value">Документы</p>
+                    </div>
+                </li>
+                <li class="trip__cards-card">
+                    <div class="card__number"> 
+                        <p class="card__number-title">№ поездки</p>
+                        <p class="card__number-value">000074</p>
+                    </div>
+                    <div class="card__date">
+                        <p class="card__date-title">Дата поездки</p>
+                        <p class="card__date-value">22.02.2024-27.02.2024</p>
+                    </div>
+                    <div class="card__sum-plan">
+                        <p class="card__sum-title">Сумма, план</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__sum-fact">
+                        <p class="card__sum-title">Сумма, факт</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__city">
+                        <p class="card__city-title">Город</p>
+                        <p class="card__city-value">Кременчуг-Константиновское, Петропавловск-Камчатский, Новосибирск, Волгоград, Саратов</p>
+                    </div>
+                    <div class="card__status">
+                        <p class="card__status-title">Статус</p>
+                        <p class="card__status-value">Документы</p>
+                    </div>
+                </li>
+                <li class="trip__cards-card">
+                    <div class="card__number"> 
+                        <p class="card__number-title">№ поездки</p>
+                        <p class="card__number-value">000115</p>
+                    </div>
+                    <div class="card__date">
+                        <p class="card__date-title">Дата поездки</p>
+                        <p class="card__date-value">22.02.2024-27.02.2024</p>
+                    </div>
+                    <div class="card__sum-plan">
+                        <p class="card__sum-title">Сумма, план</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__sum-fact">
+                        <p class="card__sum-title">Сумма, факт</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__city">
+                        <p class="card__city-title">Город</p>
+                        <p class="card__city-value">Москва, Ярославль, Ижевск, Владимир</p>
+                    </div>
+                    <div class="card__status">
+                        <p class="card__status-title">Статус</p>
+                        <p class="card__status-value">Документы</p>
+                    </div>
+                </li>
+                <li class="trip__cards-card">
+                    <div class="card__number"> 
+                        <p class="card__number-title">№ поездки</p>
+                        <p class="card__number-value">000211</p>
+                    </div>
+                    <div class="card__date">
+                        <p class="card__date-title">Дата поездки</p>
+                        <p class="card__date-value">22.02.2024-27.02.2024</p>
+                    </div>
+                    <div class="card__sum-plan">
+                        <p class="card__sum-title">Сумма, план</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__sum-fact">
+                        <p class="card__sum-title">Сумма, факт</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__city">
+                        <p class="card__city-title">Город</p>
+                        <p class="card__city-value">Москва, Ярославль, Ижевск, Владимир</p>
+                    </div>
+                    <div class="card__status">
+                        <p class="card__status-title">Статус</p>
+                        <p class="card__status-value">Документы</p>
+                    </div>
+                </li>
+                <li class="trip__cards-card">
+                    <div class="card__number"> 
+                        <p class="card__number-title">№ поездки</p>
+                        <p class="card__number-value">000118</p>
+                    </div>
+                    <div class="card__date">
+                        <p class="card__date-title">Дата поездки</p>
+                        <p class="card__date-value">22.02.2024-27.02.2024</p>
+                    </div>
+                    <div class="card__sum-plan">
+                        <p class="card__sum-title">Сумма, план</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__sum-fact">
+                        <p class="card__sum-title">Сумма, факт</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__city">
+                        <p class="card__city-title">Город</p>
+                        <p class="card__city-value">Москва, Ярославль, Ижевск, Владимир</p>
+                    </div>
+                    <div class="card__status">
+                        <p class="card__status-title">Статус</p>
+                        <p class="card__status-value">Документы</p>
+                    </div>
+                </li>
+                <li class="trip__cards-card">
+                    <div class="card__number"> 
+                        <p class="card__number-title">№ поездки</p>
+                        <p class="card__number-value">000119</p>
+                    </div>
+                    <div class="card__date">
+                        <p class="card__date-title">Дата поездки</p>
+                        <p class="card__date-value">22.02.2024-27.02.2024</p>
+                    </div>
+                    <div class="card__sum-plan">
+                        <p class="card__sum-title">Сумма, план</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__sum-fact">
+                        <p class="card__sum-title">Сумма, факт</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__city">
+                        <p class="card__city-title">Город</p>
+                        <p class="card__city-value">Москва, Ярославль, Ижевск, Владимир</p>
+                    </div>
+                    <div class="card__status">
+                        <p class="card__status-title">Статус</p>
+                        <p class="card__status-value">Документы</p>
+                    </div>
+                </li>
+                <li class="trip__cards-card">
+                    <div class="card__number"> 
+                        <p class="card__number-title">№ поездки</p>
+                        <p class="card__number-value">000120</p>
+                    </div>
+                    <div class="card__date">
+                        <p class="card__date-title">Дата поездки</p>
+                        <p class="card__date-value">22.02.2024-27.02.2024</p>
+                    </div>
+                    <div class="card__sum-plan">
+                        <p class="card__sum-title">Сумма, план</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__sum-fact">
+                        <p class="card__sum-title">Сумма, факт</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__city">
+                        <p class="card__city-title">Город</p>
+                        <p class="card__city-value">Москва, Ярославль, Ижевск, Владимир</p>
+                    </div>
+                    <div class="card__status">
+                        <p class="card__status-title">Статус</p>
+                        <p class="card__status-value">Документы</p>
+                    </div>
+                </li>
+                <li class="trip__cards-card">
+                    <div class="card__number"> 
+                        <p class="card__number-title">№ поездки</p>
+                        <p class="card__number-value">000133</p>
+                    </div>
+                    <div class="card__date">
+                        <p class="card__date-title">Дата поездки</p>
+                        <p class="card__date-value">22.02.2024-27.02.2024</p>
+                    </div>
+                    <div class="card__sum-plan">
+                        <p class="card__sum-title">Сумма, план</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__sum-fact">
+                        <p class="card__sum-title">Сумма, факт</p>
+                        <p class="card__sum-value">29 400,00</p>
+                    </div>
+                    <div class="card__city">
+                        <p class="card__city-title">Город</p>
+                        <p class="card__city-value">Москва, Ярославль, Ижевск, Владимир</p>
+                    </div>
+                    <div class="card__status">
+                        <p class="card__status-title">Статус</p>
+                        <p class="card__status-value">Документы</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <footer class="site-footer"></footer>
+    </div>  
+</body>
+</html>

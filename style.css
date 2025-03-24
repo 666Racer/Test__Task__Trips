@@ -1,0 +1,304 @@
+/* Общие стили */
+body {
+    /* UI/UI Text 14 Reg */
+    font-family: 'SF UI Text', arial;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.app-wrapper {
+    /* width: 80%; */
+    width: 1440px;
+    margin: 0 auto;
+    background: rgb(246, 252, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Хедер */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 8px 8px 0 0;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.12);
+}
+
+.header__nav-title {
+    width: 84px;
+    height: 63px;
+    padding: 0px 12px 0px 12px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(14, 115, 246);
+    margin-left: 354px;
+}
+
+.header__nav-account {
+    display: flex;
+    align-items: center;
+    position: static;
+    width: 174px;
+    height: 64px;
+}
+
+.nav-title {
+    position: static;
+    width: 60px;
+    height: 24px;
+    display: flex;
+    font-weight: 600;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 12px 0px 12px;
+
+}
+
+.nav-account {
+    font-size: 14px;
+    color: rgb(14, 115, 246);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    padding-bottom: 3px;
+}
+
+/* Меню */
+.menu-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 16px 6px 16px;
+    background-color: white;
+}
+
+.menu__title {
+    color: rgb(37, 44, 50);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    margin: 0 16px;
+}
+
+.menu__button {
+    background: #3498db;
+    color: white;
+    width: 178px;
+    height: 24px;
+    padding: 0px 8px;
+    text-decoration: none;
+    margin: 0 24px;
+    border-radius: 4px;
+}
+
+.menu__button-plus {
+    padding: 7px;
+}
+.menu__button-text {
+    color: white;
+    width: 134px;
+    margin: 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+}
+
+.menu__filters {
+    position: static;
+    width: 1408px;
+    height: 32px;
+    padding: 8px 16px 8px 16px;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgb(246, 252, 255);
+}
+
+input[type="search"], input[type="date"] {
+    border: none;
+    outline: none;
+}
+
+.date__from, .date__till {
+    margin: 0px 16px;
+}
+
+.clear-icon {
+    position: absolute;
+    top: 122px;
+    left: 480px;
+}
+
+.date__search {
+    width: 214px;
+    height: 32px;
+
+}
+
+.fas.fa-search {
+    color: #ccc;
+    margin-left: -30px;
+}
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.form-control {
+    width: 180px;
+    height: 32px;
+}
+
+.button__reset {
+    background: transparent;
+    color: rgb(64, 148, 247);
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.button__reset::before {
+    content: "✖";
+    margin-right: 5px;
+    color: rgb(64, 148, 247);
+}
+
+/* Убираем gap между чекбоксом и лейблом */
+.trips__archive {
+    display: flex;
+    margin-left: 220px;
+}
+
+/* Карточки поездок */
+.trip__cards {
+    padding: 8px 0px 0px 8px;
+}
+
+.trip__cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+}
+
+.trip__cards-card {
+    background: rgb(255, 255, 255);
+    width: 1376px;
+    padding: 16px 16px 16px 24px;
+    margin: 8px 0px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 28px;
+}
+
+.trip__cards-card:first-child{
+    margin-top: 0;
+}
+
+
+.trip__cards-card:last-child{
+    margin-bottom: 0;
+}
+
+.card__number {
+    width: 68px;
+    margin: 8px 0px;
+}
+
+.card__number-value {
+    border-bottom: 1px solid rgb(64, 148, 247);
+    width: 48px;
+    height: 24px;
+    text-align: center;
+    color: rgb(14, 115, 246);
+}
+
+.card__number-title, .card__date-title, .card__sum-title, .card__city-title, .card__status-title {
+    color: rgb(132, 145, 154);
+    margin: 8px 0px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.card__date {
+    width: 178px;
+}
+
+.card__sum-plan{
+    width: 114px;
+}
+
+.card__sum-fact{
+    width: 86px;
+}
+
+.card__city {
+    max-width: 562px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    position: relative;
+}
+
+.card__city:hover::after {
+    content: attr(data-fulltext);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: normal;
+    width: max-content;
+    max-width: 400px;
+    z-index: 10;
+}
+
+.card__city:hover {
+    white-space: normal;
+    max-width: none;
+}
+
+.card__city-value{
+    width: 562px;
+}
+
+.card__status {
+    padding: 10px;
+    margin-left: 145px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.card__status-value {
+    color: rgb(91, 104, 113);
+    border-radius: 10px;
+    background: rgb(238, 240, 242);
+}
+
